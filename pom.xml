@@ -12,5 +12,5 @@
         <maven.compiler.sourse>1.11</maven.compiler.sourse>
         <maven.compiler.target>1.11</maven.compiler.target>
     </properties>
-    
+
 </project>
