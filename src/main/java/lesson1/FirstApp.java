@@ -1,4 +1,4 @@
-package lession1;
+package lesson1;
 
 public class FirstApp {
     public static void main(String[] args) {
@@ -27,12 +27,14 @@ public class FirstApp {
     }
 
     public static void printColor(int value) {
-        if (value <= 0) {
-            System.out.println("Красный");
-        } else if (value > 0 && value <= 100) {
-            System.out.println("Желтый");
+        if (value > 0) {
+            if (value <= 100) {
+                System.out.println("Желтый");
+            } else {
+                System.out.println("Зеленый");
+            }
         } else {
-            System.out.println("Зеленый");
+            System.out.println("Красный");
         }
     }
 
