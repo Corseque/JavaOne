@@ -173,11 +173,7 @@ public class ArraysApp {
     public static void changePlaceOneAndZero (int[] arr) {
         System.out.println("Было: " + Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                arr[i] = 1;
-            } else {
-                arr[i] = 0;
-            }
+            arr[i] = (arr[i] == 0) ? 1 : 0;
         }
         System.out.println("Стало: " + Arrays.toString(arr));
     }
