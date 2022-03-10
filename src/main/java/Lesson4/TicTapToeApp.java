@@ -64,8 +64,6 @@ public class TicTapToeApp {
                     y = RANDOM.nextInt(SIZE);
                 }
             }
-
-
         } while (!isCellValid(x, y));
         System.out.printf("Робот ходит в точку %d %d", x + 1, y + 1);
         System.out.println();
@@ -111,24 +109,24 @@ public class TicTapToeApp {
                         for (int l = 0; l < DOTS_TO_WIN - 1; l++) {
                             horizontal = (map[k][l] == sym && horizontal < DOTS_TO_WIN - 1) ? ++horizontal : (horizontal == 0) ? horizontal : --horizontal;
 
-                            if (horizontal == DOTS_TO_WIN - 1 && isCellValid(k, l + 1 )) {
+                            if (horizontal == DOTS_TO_WIN - 1 && isCellValid(k, l + 1)) {
                                 dot[0] = k;
                                 dot[1] = l + 1;
                                 break;
                             } else if (horizontal == DOTS_TO_WIN - 1 && isCellValid(k, l - (DOTS_TO_WIN - 1))) {
-                                dot[0] = k ;
+                                dot[0] = k;
                                 dot[1] = l - (DOTS_TO_WIN - 1);
                                 break;
                             }
 
                             vertical = (map[l][k] == sym && vertical < DOTS_TO_WIN - 1) ? ++vertical : (vertical == 0) ? vertical : --vertical;
 
-                            if (vertical == DOTS_TO_WIN - 1 && isCellValid(l + 1, k )) {
+                            if (vertical == DOTS_TO_WIN - 1 && isCellValid(l + 1, k)) {
                                 dot[0] = l + 1;
                                 dot[1] = k;
                                 break;
                             } else if (vertical == DOTS_TO_WIN - 1 && isCellValid(l - DOTS_TO_WIN - 1, k - DOTS_TO_WIN - 1)) {
-                                dot[0] = l  - (DOTS_TO_WIN - 1);
+                                dot[0] = l - (DOTS_TO_WIN - 1);
                                 dot[1] = k;
                                 break;
                             }
@@ -185,7 +183,7 @@ public class TicTapToeApp {
      * Инициализация поля
      */
     public static void initMap() {
-        map = new char[][] {{'.', 'X', '.'}, {'O', 'X', '.'}, {'.', '0', '.'}};
+        map = new char[][]{{'.', 'X', '.'}, {'O', 'X', '.'}, {'.', '0', '.'}};
 //        map = new char[][] {{'X', 'X', 'O', '.'}, {'X', '.', '.', '.'}, {'0', '.', '.','0'}, {'.', '.', '.', '.'}};
 //        map = new char[SIZE][SIZE];
 //        for (int i = 0; i < SIZE; i++) {
