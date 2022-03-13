@@ -1,6 +1,5 @@
-package Lesson4;
+package lesson4;
 
-import javax.print.attribute.standard.MediaSize;
 import java.util.Random;
 import java.util.Scanner;
 
