@@ -3,7 +3,7 @@ package lesson4;
 import java.util.Random;
 import java.util.Scanner;
 
-public class TicTapToeApp {
+public class TicTacToeApp {
     public static char[][] map;
     public static final int SIZE = 3;
     public static final int DOTS_TO_WIN = 3;
